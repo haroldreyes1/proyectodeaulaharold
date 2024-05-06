@@ -1,0 +1,31 @@
+@startuml
+title Diagrama de clases de ProAula
+
+class Usuario {
+    + String nombre;
+    + String carrera;
+    + String numeroIdentificacion;
+    + String apellido;
+    + String genero;
+    + String int puntos;
+            
+}
+
+
+class Premios{
+  +   int id; 
+  +  String nombre; 
+  + String puntos;
+}
+class Residuo{
+ +  int codigo; 
+ + String material; 
+ + String objetos;
+ + String puntos;
+}
+
+Usuario "1" -- "*" Premios: pertenecer
+Premios "1" -- "1" Residuo: pertenecer
+
+
+@enduml
